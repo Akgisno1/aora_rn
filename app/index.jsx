@@ -7,9 +7,9 @@ import { images } from "../constants";
 import CustomButton from "../components/CustomButton";
 import { useGlobalContext } from "../context/GlobalProvider";
 export default function App() {
-  const { isLoading, isLoggedIn } = useGlobalContext();
+  const { loading, isLogged } = useGlobalContext();
 
-  if (!isLoading && isLoggedIn) {
+  if (!loading && isLogged) {
     return <Redirect href="/home" />;
   }
 
